@@ -1,0 +1,32 @@
+<mat-card>
+  <form (submit)="guardarPost(postForm)" #postForm="ngForm">
+    <mat-form-field>
+      <input
+       placeholder="Ingrese Titulo"
+       matInput type="text"
+       minlength="3"
+      name="titulo"
+      ngModel
+      required
+      #titulo="ngModel"
+      >
+      <mat-error *ngIf="titulo.invalid">Porfavor ingrese un titulo</mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <textarea
+      rows="6"
+      matInput
+      name="contenido"
+      ngModel
+      required
+      #contenido="ngModel"
+      >
+      </textarea>
+      <mat-error *ngIf="contenido.invalid">Porfavor ingrese un contenido</mat-error>
+    </mat-form-field>
+    <button color="primary" mat-raised-button
+      type="submit">
+      Guardar Post
+    </button>
+  </form>
+</mat-card>
