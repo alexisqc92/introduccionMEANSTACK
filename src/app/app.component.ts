@@ -7,9 +7,9 @@ import { Post } from './posts/post.model';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  posts: Post[] = [];
+  // posts: Post[] = [];
 
-  enCreacionPost(post){
-    this.posts.push(post);
-  }
+  // enCreacionPost(post){
+  //   this.posts.push(post);
+  // }
 }
